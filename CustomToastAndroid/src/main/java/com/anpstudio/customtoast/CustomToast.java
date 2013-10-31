@@ -28,9 +28,9 @@ public class CustomToast extends Toast {
 
 
             LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            //Inflate custom layout Toast
             View vi = (View) li.inflate(R.layout.custom_layout_toast, null);
-            animation= AnimationUtils.loadAnimation(context, R.anim.left);
-            vi.setAnimation(animation);
+
             TextView tv = (TextView) vi.findViewById(R.id.text_toast);
             this.setView(vi);
             tv.setText(text);
